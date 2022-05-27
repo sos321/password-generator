@@ -1,5 +1,27 @@
 {
-  "devDependencies": {
-    "uglify-js": "^3.15.5"
-  }
+    "devDependencies": {
+        "uglify-js": "^3.15.5"
+    },
+    "name": "passwordgenerator",
+    "version": "1.0.0",
+    "description": "simple password generator",
+    "main": "script.js",
+    "scripts": {
+        "deploy": "uglifyjs js/script.js -c -o dist/js/script.min.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sos321/password-generator.git"
+    },
+    "keywords": [
+        "password",
+        "generator",
+        "project"
+    ],
+    "author": "sos321",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sos321/password-generator/issues"
+    },
+    "homepage": "https://github.com/sos321/password-generator#readme"
 }
