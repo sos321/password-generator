@@ -15,7 +15,40 @@
         <title>Password Generator</title>
     </head>
     <body>
-        <script src="js/script.js"></script>
+        <header class="title">
+            <h1 class="heading-primary">Password Generator</h1>
+            <p class="subheading">
+                Quickly generate secure passwords tailored to your liking
+            </p>
+        </header>
+        <main>
+            <div class="password-container">
+                <p class="password">FTH56?!dsf</p>
+                <ion-icon name="copy-outline" class="icon-password"></ion-icon>
+                <ion-icon name="sync-outline" class="icon-password"></ion-icon>
+            </div>
+            <div class="strength-container"></div>
+            <div class="options-container">
+                <div class="length-options">
+                    <p class="length-text">10</p>
+                    <label for="length">Password length</label>
+                    <input type="range" min="6" max="30" id="length" />
+                </div>
+                <div class="other-options">
+                    <label for="lower">Lowercase</label>
+                    <input type="radio" id="lower" />
+                    <label for="upper">Uppercase</label>
+                    <input type="radio" id="upper" />
+                    <label for="nums">Numbers</label>
+                    <input type="radio" id="nums" />
+                    <label for="symbols">Symbols</label>
+                    <input type="radio" id="symbols" />
+                </div>
+            </div>
+            <button class="btn">Copy Password</button>
+        </main>
+
+        <script src="../js/script.js"></script>
         <script
             type="module"
             src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
