@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "gh-pages": "^4.0.0",
         "uglify-js": "^3.15.5"
     },
     "name": "passwordgenerator",
@@ -7,7 +8,8 @@
     "description": "simple password generator",
     "main": "script.js",
     "scripts": {
-        "deploy": "uglifyjs js/script.js -c -o dist/js/script.min.js"
+        "predeploy": "uglifyjs js/script.js -c -o dist/js/script.min.js",
+        "deploy": "gh-pages -d dist"
     },
     "repository": {
         "type": "git",
