@@ -15,38 +15,67 @@
         <title>Password Generator</title>
     </head>
     <body>
-        <header class="title">
-            <h1 class="heading-primary">Password Generator</h1>
-            <p class="subheading">
-                Quickly generate secure passwords tailored to your liking
-            </p>
-        </header>
-        <main>
-            <div class="password-container">
-                <p class="password">FTH56?!dsf</p>
-                <ion-icon name="copy-outline" class="icon-password"></ion-icon>
-                <ion-icon name="sync-outline" class="icon-password"></ion-icon>
-            </div>
-            <div class="strength-container"></div>
-            <div class="options-container">
-                <div class="length-options">
-                    <p class="length-text">10</p>
-                    <label for="length">Password length</label>
-                    <input type="range" min="6" max="30" id="length" />
+        <div class="container">
+            <header class="title">
+                <h1 class="heading-primary">Password Generator</h1>
+                <p class="subheading">
+                    Quickly generate secure passwords tailored to your liking
+                </p>
+            </header>
+            <main>
+                <div class="password-container">
+                    <p class="password">fgT*5/dFmn56dt58-9tGF</p>
+                    <div class="password-btns">
+                        <button class="btn-icon" title="Copy">
+                            <ion-icon
+                                name="copy-outline"
+                                class="icon-password"
+                            ></ion-icon>
+                        </button>
+                        <button class="btn-icon" title="Generate">
+                            <ion-icon
+                                name="sync-outline"
+                                class="icon-password"
+                            ></ion-icon>
+                        </button>
+                    </div>
                 </div>
-                <div class="other-options">
-                    <label for="lower">Lowercase</label>
-                    <input type="radio" id="lower" />
-                    <label for="upper">Uppercase</label>
-                    <input type="radio" id="upper" />
-                    <label for="nums">Numbers</label>
-                    <input type="radio" id="nums" />
-                    <label for="symbols">Symbols</label>
-                    <input type="radio" id="symbols" />
+                <div class="strength-container"></div>
+                <div class="options-container">
+                    <div class="length-options">
+                        <label for="length">Length:</label>
+                        <input
+                            type="range"
+                            min="6"
+                            max="20"
+                            id="length"
+                            value="10"
+                        />
+                        <p class="length-text">10</p>
+                    </div>
+                    <div class="other-options">
+                        <p class="other-options-title">Characters:</p>
+                        <div>
+                            <label for="lower">Lowercase</label>
+                            <input type="checkbox" id="lower" checked />
+                        </div>
+                        <div>
+                            <label for="upper">Uppercase</label>
+                            <input type="checkbox" id="upper" />
+                        </div>
+                        <div>
+                            <label for="nums">Numbers</label>
+                            <input type="checkbox" id="nums" />
+                        </div>
+                        <div>
+                            <label for="symbols">Symbols</label>
+                            <input type="checkbox" id="symbols" />
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <button class="btn">Copy Password</button>
-        </main>
+                <button class="cta">Copy Password</button>
+            </main>
+        </div>
 
         <script src="../js/script.js"></script>
         <script

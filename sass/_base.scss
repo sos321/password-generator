@@ -1,12 +1,50 @@
+// * General Resets
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+// * Color Variables
+
+$main-color-darker: #2d3047;
+$main-color: #d9e7f3;
+
+$green-color: #06d6a0;
+$yelow-color: #ffba08;
+$red-color: #d00000;
+
+// * Font Size Variables
+
+html {
+    font-size: 62.5%;
+}
+
+$font-size-base: 2.4rem;
+$font-size-medium: 3.2rem;
+$font-size-large: 6.4rem;
+$font-size-password: 3.6rem;
+
+// * General Body Element Styles
+
 body {
     font-family: "Montserrat", sans-serif;
-    font-size: 16px;
+    font-size: $font-size-base;
+    text-align: center;
+
+    height: 100vh;
 
     line-height: 1.5;
+}
+
+// * Lengths
+$width-base: 50rem;
+$margin-bottom-base: 6rem;
+
+@mixin flex($direction: row, $align: center, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    gap: $gap;
 }

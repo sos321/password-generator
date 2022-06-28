@@ -1,0 +1,12 @@
+body {
+    @include flex(row, center, 0);
+    justify-content: center;
+}
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @include flex(column, center, 0);
+    justify-content: center;
+}
