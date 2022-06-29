@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    max-width: 70rem;
+    max-width: 72rem;
     margin: 0 auto;
 
     @include flex(column, center, 0);
