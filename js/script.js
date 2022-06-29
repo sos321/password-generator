@@ -62,6 +62,12 @@ copyButtonMain.addEventListener("click", copyTextToClipboard);
 copyButtonSec.addEventListener("click", copyTextToClipboard);
 
 function copyTextToClipboard() {
+    this.firstElementChild.style.opacity = 1;
+
+    setTimeout(() => {
+        this.firstElementChild.style.opacity = 0;
+    }, 800);
+
     if (navigator && navigator.clipboard && navigator.clipboard.writeText)
         return navigator.clipboard.writeText(passwordText.textContent);
     return Promise.reject("The Clipboard API is not available.");
@@ -91,13 +97,13 @@ function updateStrength() {
     const strength = options.length + Math.floor(length / 2);
 
     if (strength < 6) {
-        strengthEl.style.width = `${54 / 3}rem`;
+        strengthEl.style.width = `33%`;
         strengthEl.style.backgroundColor = colors.red;
     } else if (strength < 9) {
-        strengthEl.style.width = `${(54 / 3) * 2}rem`;
+        strengthEl.style.width = `66%`;
         strengthEl.style.backgroundColor = colors.yellow;
     } else {
-        strengthEl.style.width = `${54}rem`;
+        strengthEl.style.width = `100%`;
         strengthEl.style.backgroundColor = colors.green;
     }
 }
